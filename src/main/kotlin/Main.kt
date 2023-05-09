@@ -2,9 +2,7 @@ fun main() {
 println(numbers)
 println(numbers)
     println(sortedNumber)
-    var person= listOf(
-        person()
-    )
+    println(arrayOf(numbers.sortedArray())ToString())
 
 }
 // Create one function that is given the below array:
@@ -31,8 +29,10 @@ fun person() {
     class Person(name: String, age: Int, height: Float, weight: Double)
 }
 //Create a function that takes in 3 names and returns a string array containing all 3 names. (2 points)
-fun names(){
-    var names = ("Janet,Joice,Joy")
+fun names(name1:String,name2:String,name3:String):String{
+
+    var names = arrayOf(name1,name2,name3)
+      return arrayOf(names)
 
 }
 
@@ -41,4 +41,18 @@ fun names(){
 
 
 
-// Write a function that takes in a list of Car objects each with a registration and mileage attribute and returns the average mileage of all the vehicles in the list. (3 points)
+// Write a function that takes in a list of Car objects each with a registration and mileage
+// attribute and returns the average mileage of all the vehicles in the list. (3 points)
+data class Vehicle(var registration:String,var mileage:Int)
+fun vehicleObject(vehicle: List<Vehicle>):Int{
+    var K= Vehicle("KCC",89)
+    var V = Vehicle("KAV",90)
+    var V = Vehicle("KWT",58)
+    var allVehicles = listOf(K,V,V)
+    var ack=0
+    vehicle.forEach { car ->
+        car.mileage
+        ack += car.mileage
+    }
+    var totalack=vehicle.count()
+    return totalack
